@@ -20,7 +20,8 @@ extern volatile uint16_t g_adcResult;
 /*******************************************************************************
  *                      Functions Prototypes                                   *
  *******************************************************************************/
-
+void ADC_INT_EN();
+void ADC_INT_DIS();
 /*
  * Description :
  * Function responsible for initialize the ADC driver.
@@ -32,6 +33,8 @@ void ADC_init(void);
  * Function responsible for read analog data from a certain ADC channel
  * and convert it to digital using the ADC driver.
  */
-void ADC_readChannel(uint8_t channel_num);
+uint32_t ADC_readChannel(uint8_t channel_num);
+
+void ADC_setCallBack(void(*a_ptr)(void));
 
 #endif /* ADC_H_ */

@@ -11,13 +11,30 @@
 extern uint8_t system_state;
 
 void Bluetooth_ISR(){
+	USART_INT_DIS();
 	uint8_t data = USART_Receive();
-	//20 is a magic number
-	if(data == 20){
-		//switch system state & disable interrupt
-		system_state ^= 1;
-		cli();
+	switch(system_state){
+	case '0':
+		uart_sendstr("autonomus");
+		uart_sendint(data);
+		//20 is a magic number
+		if(data == 'A'){
+			//switch system state & disable interrupt
+			system_state = '1';
+			uart_sendint(system_state);
+			Delay(500);
+			uart_sendstr("switch");
 
+			USART_INT_DIS();
+
+		}else{
+			USART_INT_EN();
+		}
+		break;
+	case '1':
+		uart_sendstr("manual");
+
+		break;
 	}
 }
 void HC05_init(void)

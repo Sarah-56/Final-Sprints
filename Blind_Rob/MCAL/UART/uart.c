@@ -20,6 +20,12 @@ ISR(USART0_RX_vect){
 	}
 }
 
+void USART_INT_EN(){
+	UCSR0B |= (1 << RXCIE0); //recieve data interrupt, makes sure we don't loose data
+}
+void USART_INT_DIS(){
+	UCSR0B &= ~(1 << RXCIE0); //recieve data interrupt, makes sure we don't loose data
+}
 void uart_start(void) {
   UCSR0B |= (1 << RXEN0) | (1 << TXEN0); //transmit side of hardware
   UCSR0C |= (1 << UCSZ00) | (1 << UCSZ01); //receive side of hardware
@@ -27,7 +33,7 @@ void uart_start(void) {
   UBRR0L = BAUD_PRESCALE; //set the baud to 9600, have to split it into the two registers
   UBRR0H = (BAUD_PRESCALE >> 8); //high end of baud register
 
- // UCSR0B |= (1 << RXCIE0); //recieve data interrupt, makes sure we don't loose data
+  USART_INT_DIS();
 
   #if DEBUG
     uart_sendstr("0x04 - UART is up...");
@@ -41,7 +47,7 @@ void uart_sendint(uint8_t data) {
     while ((UCSR0A & (1 << UDRE0)) == 0);//make sure the data register is cleared
     UDR0 = data; //send the data
     while ((UCSR0A & (1 << UDRE0)) == 0);//make sure the data register is cleared
-    UDR0 = '\n';//send a new line just to be sure
+    UDR0 = '\r';//send a new line just to be sure
 }
 
 void uart_sendint16(uint16_t data) {
@@ -67,7 +73,7 @@ void uart_sendstr(char *data) {
         data += 1;//go to new bit in string
     }
     while ((UCSR0A & (1 << UDRE0)) == 0);//make sure the data register is cleared
-    UDR0 = '\n';//send a new line just to be sure
+    UDR0 = '\r';//send a new line just to be sure
 }
 
 

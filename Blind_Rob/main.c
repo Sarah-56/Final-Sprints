@@ -11,5 +11,6 @@
 
 int main(){
 	MainApp();
+	//testadc();
 	return  0;
 }

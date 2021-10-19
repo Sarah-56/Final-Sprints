@@ -41,6 +41,7 @@
 /* Check if a specific bit is cleared in any register and return true if yes */
 #define BIT_IS_CLEAR(REG,BIT) ( !(REG & (1<<BIT)) )
 
+void Delay(unsigned long counter);
 
 # define sei()  __asm__ __volatile__ ("sei" ::)
 # define cli()  __asm__ __volatile__ ("cli" ::)

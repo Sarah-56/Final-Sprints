@@ -24,6 +24,8 @@
 //-------------------------------------------
 //Prototypes
 //-------------------------------------------
+void USART_INT_EN();
+void USART_INT_DIS();
 void uart_start(void);
 void uart_sendint(uint8_t data);
 void uart_sendint16(uint16_t data);

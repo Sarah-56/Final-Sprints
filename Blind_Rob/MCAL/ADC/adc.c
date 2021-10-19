@@ -18,18 +18,22 @@
  *******************************************************************************/
 
 volatile uint16_t g_adcResult = 0;
+static volatile void (*ADC_callBackPtr)(void) = NULL_PTR;
 
 /*******************************************************************************
  *                          ISR's Definitions                                  *
  *******************************************************************************/
-
-
-
-void __vector_29 (void) __attribute__ ((signal,used));
-void __vector_29(void)/*ADC ISR*/
+void __vector_29 (void) __attribute__ ((signal,used));//Declaration
+void __vector_29(void)/*ADC ISR*/ //Definition
 {
 	/* Read ADC Data after conversion complete */
 	g_adcResult = ADC;
+	if(ADC_callBackPtr != NULL_PTR)
+	{
+		/* Call the Call Back function in the application after the edge is detected */
+		(*ADC_callBackPtr)();
+	}
+
 
 
 }/*end of __vector_29()*/
@@ -38,7 +42,12 @@ void __vector_29(void)/*ADC ISR*/
 /*******************************************************************************
  *                          Functions Definitions                              *
  *******************************************************************************/
-
+void ADC_INT_EN(){
+	ADCSRA |= (1<<ADIE);
+}
+void ADC_INT_DIS(){
+	ADCSRA &= ~(1<<ADIE);
+}
 void ADC_init(void)
 {
 	/* ADMUX Register Bits Description:
@@ -62,7 +71,7 @@ void ADC_init(void)
 	DIDR0 = 1<<ADC0D | 1<<ADC1D | 1<<ADC2D;
 }
 
-void ADC_readChannel(uint8_t channel_num)
+uint32_t ADC_readChannel(uint8_t channel_num)
 {
 	channel_num &= 0x07; 			/* channel number must be from 0 --> 7 */
 	ADMUX &= 0xE0; 					/* clear first 5 bits in the ADMUX (channel number MUX4:0 bits) before set the required channel */
@@ -70,5 +79,12 @@ void ADC_readChannel(uint8_t channel_num)
 	SET_BIT(ADCSRA,ADSC); 			/* start conversion write '1' to ADSC */
 	while((ADCSRA&(1<<ADIF))==0);	/* Monitor end of conversion interrupt */
 	g_adcResult = ADC;
-
+	return ((uint32_t)g_adcResult*150*5)/(1023*1.5);
 }
+
+void ADC_setCallBack(void(*a_ptr)(void))
+{
+	/* Save the address of the Call back function in a global variable */
+	ADC_callBackPtr = a_ptr;
+}
+
