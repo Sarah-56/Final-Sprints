@@ -12,5 +12,6 @@
 int main(){
 	MainApp();
 	//testadc();
+	//test_dio();
 	return  0;
 }

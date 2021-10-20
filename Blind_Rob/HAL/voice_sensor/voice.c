@@ -6,23 +6,17 @@
  */
 
 #include "voice.h"
+//#include "../Motor/motors.h"
 #include "stdlib.h"
 
 extern uint8_t auto_state;
 
 void Compare_Action(){
-	char String[5];
-	Bluetooth_Write_String("ADC");
 	ADC_INT_DIS();
 
 	uint32_t SR1 = ADC_readChannel(SEN1);
-	itoa(SR1,String,10);
-	Bluetooth_Write_String(String);
-	Bluetooth_Write('-');
 
 	uint32_t SR2 = ADC_readChannel(SEN2);
-	itoa(SR1,String,10);
-	Bluetooth_Write_String(String);
 
 	if(SR1 > SR2){
 		auto_state = 'R';
@@ -33,6 +27,7 @@ void Compare_Action(){
 	else{
 		auto_state = 'L';
 	}
+	Bluetooth_Write(auto_state);
 }
 
 void Voice_Sensor_Init(){

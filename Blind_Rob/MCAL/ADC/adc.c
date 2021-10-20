@@ -6,8 +6,6 @@
  *
  * Description: Source file for the ATmega16 ADC driver
  *
- * Author: Mohamed Tarek
- *
  *******************************************************************************/
 
 #include "adc.h"

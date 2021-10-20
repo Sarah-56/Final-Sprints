@@ -8,6 +8,7 @@
 
 #include "../../MCAL/DIO/DIO.h"
 #include "../../MCAL/Timer/Timer2/Timer2_Interface.h"
+#include "../../HAL/Bluetooth/bluetooth.h"
 #include "motors.h"
 
 typedef enum{
@@ -36,6 +37,7 @@ void motor_start(uint8_t speed, Direction dir)
 {
 	set_mspeed(speed);
 	set_direction(dir);
+	//Bluetooth_Write_String("MOTOR");
 }
 
 void set_mspeed(uint8_t duty_cycle)

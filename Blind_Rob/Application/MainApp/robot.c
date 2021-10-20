@@ -10,7 +10,7 @@
 #include "../../MCAL/ADC/adc.h"
 
 uint8_t system_state = '1';
-uint8_t auto_state = 'S';
+uint8_t auto_state = 'F';
 
 
 void MainApp(){
@@ -21,27 +21,48 @@ void MainApp(){
 	ADC_init();
 	Voice_Sensor_Init();
 	uint8_t key;
+
 	while(1){
-		//Bluetooth_Write(system_state);
+
 		switch(system_state){
 		case '0': //auto
+			ADC_INT_EN();
 			//enable interrupt
 			//standby();
-//			while(auto_state == 'S');
-			switch(auto_state){
-			case 'F':
-				motor_start(50, Forward);
-				break;
-			case 'R':
-				motor_start(50, Right);
-				break;
-			case 'L':
-				motor_start(50, Left);
-				break;
-			default:
-				motor_stop();
-				break;
+			Compare_Action();
+
+			while(auto_state == 'S');
+
+			if(auto_state == 'R'){
+
+				motor_start(100, Right);
+
+
+			}else if(auto_state == 'L'){
+
+				motor_start(100, Left);
+
+
+			}else if(auto_state == 'F'){
+
+				motor_start(100, Forward);
+
 			}
+//			switch(auto_state){
+//
+//			case 'F':
+//				motor_start(100, Forward);
+//				break;
+//			case 'R':
+//				motor_start(100, Right);
+//				break;
+//			case 'L':
+//				motor_start(100, Left);
+//				break;
+//			default:
+//				motor_stop();
+//				break;
+//			}
 			Delay(500);
 			motor_stop();
 			auto_state = 'S';
@@ -54,13 +75,13 @@ void MainApp(){
 			 Bluetooth_Write(key);
 			switch(key){
 			case '0':
-				motor_start(50, Forward);
+				motor_start(100, Forward);
 				break;
 			case '1':
-				motor_start(50, Right);
+				motor_start(100, Right);
 				break;
 			case '2':
-				motor_start(50, Left);
+				motor_start(100, Left);
 
 				break;
 			case '3':

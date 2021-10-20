@@ -7,7 +7,7 @@
 
 #ifndef APPLICATION_APP2_TEST_DIO_H_
 #define APPLICATION_APP2_TEST_DIO_H_
-
+void op();
 void test_dio();
 
 #endif /* APPLICATION_APP2_TEST_DIO_H_ */

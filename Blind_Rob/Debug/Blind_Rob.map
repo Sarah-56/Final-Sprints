@@ -35,7 +35,7 @@ c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_fpcmp_parts_sf.o)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clz.o)
                               c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clzsi2.o) (__clz_tab)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(itoa.o)
-                              ./HAL/voice_sensor/voice.o (itoa)
+                              ./Application/APP3/app3.o (itoa)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(strrev.o)
                               c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(itoa.o) (strrev)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_udivmodhi4.o)
@@ -171,7 +171,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3272
+.text           0x00000000     0x323a
  *(.vectors)
  .vectors       0x00000000       0xe4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6/crtm2560.o
                 0x00000000                __vectors
@@ -364,159 +364,159 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
                 0x00000e7c       0x1a ./MCAL/Timer/Timer2/Timer2.o
                 0x00000e7c                TIMER2_voidStopTimer
  .text.TIMER2_voidInitializeTimer2
-                0x00000e96       0xae ./MCAL/Timer/Timer2/Timer2.o
+                0x00000e96       0xac ./MCAL/Timer/Timer2/Timer2.o
                 0x00000e96                TIMER2_voidInitializeTimer2
  .text.TIMER2_voidFastPWM
-                0x00000f44       0x20 ./MCAL/Timer/Timer2/Timer2.o
-                0x00000f44                TIMER2_voidFastPWM
+                0x00000f42       0x20 ./MCAL/Timer/Timer2/Timer2.o
+                0x00000f42                TIMER2_voidFastPWM
  .text.TIMER0_voidStartTimer
-                0x00000f64       0x22 ./MCAL/Timer/Timer0/Timer0.o
-                0x00000f64                TIMER0_voidStartTimer
+                0x00000f62       0x22 ./MCAL/Timer/Timer0/Timer0.o
+                0x00000f62                TIMER0_voidStartTimer
  .text.TIMER0_voidStopTimer
-                0x00000f86       0x1a ./MCAL/Timer/Timer0/Timer0.o
-                0x00000f86                TIMER0_voidStopTimer
+                0x00000f84       0x1a ./MCAL/Timer/Timer0/Timer0.o
+                0x00000f84                TIMER0_voidStopTimer
  .text.TIMER0_voidInitializeTIMER0
-                0x00000fa0       0xae ./MCAL/Timer/Timer0/Timer0.o
-                0x00000fa0                TIMER0_voidInitializeTIMER0
+                0x00000f9e       0xae ./MCAL/Timer/Timer0/Timer0.o
+                0x00000f9e                TIMER0_voidInitializeTIMER0
  .text.TIMER0_voidFastPWM
-                0x0000104e       0x20 ./MCAL/Timer/Timer0/Timer0.o
-                0x0000104e                TIMER0_voidFastPWM
+                0x0000104c       0x20 ./MCAL/Timer/Timer0/Timer0.o
+                0x0000104c                TIMER0_voidFastPWM
  .text.pin_init
-                0x0000106e      0x51c ./MCAL/DIO/DIO.o
-                0x0000106e                pin_init
+                0x0000106c      0x51c ./MCAL/DIO/DIO.o
+                0x0000106c                pin_init
  .text.port_init
-                0x0000158a      0x168 ./MCAL/DIO/DIO.o
-                0x0000158a                port_init
+                0x00001588      0x168 ./MCAL/DIO/DIO.o
+                0x00001588                port_init
  .text.pin_read
-                0x000016f2      0x294 ./MCAL/DIO/DIO.o
-                0x000016f2                pin_read
+                0x000016f0      0x294 ./MCAL/DIO/DIO.o
+                0x000016f0                pin_read
  .text.Write_Pin
-                0x00001986      0x400 ./MCAL/DIO/DIO.o
-                0x00001986                Write_Pin
+                0x00001984      0x400 ./MCAL/DIO/DIO.o
+                0x00001984                Write_Pin
  .text.pin_write
-                0x00001d86      0x4f6 ./MCAL/DIO/DIO.o
-                0x00001d86                pin_write
+                0x00001d84      0x4f6 ./MCAL/DIO/DIO.o
+                0x00001d84                pin_write
  .text.port_read
-                0x0000227c      0x13c ./MCAL/DIO/DIO.o
-                0x0000227c                port_read
+                0x0000227a      0x13c ./MCAL/DIO/DIO.o
+                0x0000227a                port_read
  .text.port_write
-                0x000023b8      0x136 ./MCAL/DIO/DIO.o
-                0x000023b8                port_write
+                0x000023b6      0x136 ./MCAL/DIO/DIO.o
+                0x000023b6                port_write
  .text.__vector_29
-                0x000024ee       0x82 ./MCAL/ADC/adc.o
-                0x000024ee                __vector_29
+                0x000024ec       0x82 ./MCAL/ADC/adc.o
+                0x000024ec                __vector_29
  .text.ADC_INT_EN
-                0x00002570       0x1c ./MCAL/ADC/adc.o
-                0x00002570                ADC_INT_EN
+                0x0000256e       0x1c ./MCAL/ADC/adc.o
+                0x0000256e                ADC_INT_EN
  .text.ADC_INT_DIS
-                0x0000258c       0x1c ./MCAL/ADC/adc.o
-                0x0000258c                ADC_INT_DIS
+                0x0000258a       0x1c ./MCAL/ADC/adc.o
+                0x0000258a                ADC_INT_DIS
  .text.ADC_init
-                0x000025a8       0x38 ./MCAL/ADC/adc.o
-                0x000025a8                ADC_init
+                0x000025a6       0x38 ./MCAL/ADC/adc.o
+                0x000025a6                ADC_init
  .text.ADC_readChannel
-                0x000025e0       0xba ./MCAL/ADC/adc.o
-                0x000025e0                ADC_readChannel
+                0x000025de       0xba ./MCAL/ADC/adc.o
+                0x000025de                ADC_readChannel
  .text.ADC_setCallBack
-                0x0000269a       0x26 ./MCAL/ADC/adc.o
-                0x0000269a                ADC_setCallBack
+                0x00002698       0x26 ./MCAL/ADC/adc.o
+                0x00002698                ADC_setCallBack
  .text.Compare_Action
-                0x000026c0       0xde ./HAL/voice_sensor/voice.o
-                0x000026c0                Compare_Action
+                0x000026be       0xa0 ./HAL/voice_sensor/voice.o
+                0x000026be                Compare_Action
  .text.Voice_Sensor_Init
-                0x0000279e       0x1a ./HAL/voice_sensor/voice.o
-                0x0000279e                Voice_Sensor_Init
+                0x0000275e       0x1a ./HAL/voice_sensor/voice.o
+                0x0000275e                Voice_Sensor_Init
  .text.sensorRead
-                0x000027b8       0x2c ./HAL/voice_sensor/voice.o
-                0x000027b8                sensorRead
+                0x00002778       0x2c ./HAL/voice_sensor/voice.o
+                0x00002778                sensorRead
  .text.Servo_Init
-                0x000027e4       0x84 ./HAL/Servo/servo.o
-                0x000027e4                Servo_Init
+                0x000027a4       0x84 ./HAL/Servo/servo.o
+                0x000027a4                Servo_Init
  .text.Increase_angle
-                0x00002868       0x94 ./HAL/Servo/servo.o
-                0x00002868                Increase_angle
+                0x00002828       0x94 ./HAL/Servo/servo.o
+                0x00002828                Increase_angle
  .text.Decrease_angle
-                0x000028fc       0x94 ./HAL/Servo/servo.o
-                0x000028fc                Decrease_angle
+                0x000028bc       0x94 ./HAL/Servo/servo.o
+                0x000028bc                Decrease_angle
  .text.motor_init
-                0x00002990       0x54 ./HAL/Motor/motors.o
-                0x00002990                motor_init
+                0x00002950       0x54 ./HAL/Motor/motors.o
+                0x00002950                motor_init
  .text.motor_start
-                0x000029e4       0x26 ./HAL/Motor/motors.o
-                0x000029e4                motor_start
+                0x000029a4       0x26 ./HAL/Motor/motors.o
+                0x000029a4                motor_start
  .text.set_mspeed
-                0x00002a0a       0x14 ./HAL/Motor/motors.o
-                0x00002a0a                set_mspeed
+                0x000029ca       0x14 ./HAL/Motor/motors.o
+                0x000029ca                set_mspeed
  .text.set_direction
-                0x00002a1e      0x10c ./HAL/Motor/motors.o
-                0x00002a1e                set_direction
+                0x000029de      0x10c ./HAL/Motor/motors.o
+                0x000029de                set_direction
  .text.motor_stop
-                0x00002b2a       0x36 ./HAL/Motor/motors.o
-                0x00002b2a                motor_stop
+                0x00002aea       0x36 ./HAL/Motor/motors.o
+                0x00002aea                motor_stop
  .text.LED_Init
-                0x00002b60       0x1c ./HAL/LED/LED.o
-                0x00002b60                LED_Init
- .text.LED_ON   0x00002b7c       0x1c ./HAL/LED/LED.o
-                0x00002b7c                LED_ON
- .text.LED_OFF  0x00002b98       0x1c ./HAL/LED/LED.o
-                0x00002b98                LED_OFF
- .text.LED2_ON  0x00002bb4       0x1c ./HAL/LED/LED.o
-                0x00002bb4                LED2_ON
+                0x00002b20       0x1c ./HAL/LED/LED.o
+                0x00002b20                LED_Init
+ .text.LED_ON   0x00002b3c       0x1c ./HAL/LED/LED.o
+                0x00002b3c                LED_ON
+ .text.LED_OFF  0x00002b58       0x1c ./HAL/LED/LED.o
+                0x00002b58                LED_OFF
+ .text.LED2_ON  0x00002b74       0x1c ./HAL/LED/LED.o
+                0x00002b74                LED2_ON
  .text.LED2_OFF
-                0x00002bd0       0x1c ./HAL/LED/LED.o
-                0x00002bd0                LED2_OFF
+                0x00002b90       0x1c ./HAL/LED/LED.o
+                0x00002b90                LED2_OFF
  .text.Bluetooth_ISR
-                0x00002bec       0x8c ./HAL/Bluetooth/bluetooth.o
-                0x00002bec                Bluetooth_ISR
+                0x00002bac       0x8c ./HAL/Bluetooth/bluetooth.o
+                0x00002bac                Bluetooth_ISR
  .text.HC05_init
-                0x00002c78       0x1a ./HAL/Bluetooth/bluetooth.o
-                0x00002c78                HC05_init
+                0x00002c38       0x1a ./HAL/Bluetooth/bluetooth.o
+                0x00002c38                HC05_init
  .text.Bluetooth_Read
-                0x00002c92       0x12 ./HAL/Bluetooth/bluetooth.o
-                0x00002c92                Bluetooth_Read
+                0x00002c52       0x12 ./HAL/Bluetooth/bluetooth.o
+                0x00002c52                Bluetooth_Read
  .text.Bluetooth_Write
-                0x00002ca4       0x1a ./HAL/Bluetooth/bluetooth.o
-                0x00002ca4                Bluetooth_Write
+                0x00002c64       0x1a ./HAL/Bluetooth/bluetooth.o
+                0x00002c64                Bluetooth_Write
  .text.Bluetooth_Write_String
-                0x00002cbe       0x3c ./HAL/Bluetooth/bluetooth.o
-                0x00002cbe                Bluetooth_Write_String
- .text.MainApp  0x00002cfa      0x19c ./Application/MainApp/robot.o
-                0x00002cfa                MainApp
- .text.op       0x00002e96       0x12 ./Application/App2/App2.o
-                0x00002e96                op
+                0x00002c7e       0x3c ./HAL/Bluetooth/bluetooth.o
+                0x00002c7e                Bluetooth_Write_String
+ .text.MainApp  0x00002cba      0x18e ./Application/MainApp/robot.o
+                0x00002cba                MainApp
+ .text.op       0x00002e48       0x12 ./Application/App2/App2.o
+                0x00002e48                op
  .text.test_dio
-                0x00002ea8        0xa ./Application/App2/App2.o
-                0x00002ea8                test_dio
- .text.Delay    0x00002eb2       0x70 ./Application/App1/test_bluetooth.o
-                0x00002eb2                Delay
+                0x00002e5a       0x20 ./Application/App2/App2.o
+                0x00002e5a                test_dio
+ .text.Delay    0x00002e7a       0x70 ./Application/App1/test_bluetooth.o
+                0x00002e7a                Delay
  .text.Test_Bluetooth
-                0x00002f22       0x40 ./Application/App1/test_bluetooth.o
-                0x00002f22                Test_Bluetooth
- .text.testadc  0x00002f62      0x1c0 ./Application/APP3/app3.o
-                0x00002f62                testadc
- .text.main     0x00003122       0x16 ./main.o
-                0x00003122                main
- .text.libgcc   0x00003138       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_mulsi3.o)
-                0x00003138                __mulsi3
- .text.libgcc   0x00003176        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
- .text.libgcc   0x00003176        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00003176       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_prologue.o)
-                0x00003176                __prologue_saves__
- .text.libgcc   0x000031ae       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_epilogue.o)
-                0x000031ae                __epilogue_restores__
+                0x00002eea       0x40 ./Application/App1/test_bluetooth.o
+                0x00002eea                Test_Bluetooth
+ .text.testadc  0x00002f2a      0x1c0 ./Application/APP3/app3.o
+                0x00002f2a                testadc
+ .text.main     0x000030ea       0x16 ./main.o
+                0x000030ea                main
+ .text.libgcc   0x00003100       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_mulsi3.o)
+                0x00003100                __mulsi3
+ .text.libgcc   0x0000313e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
+ .text.libgcc   0x0000313e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000313e       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_prologue.o)
+                0x0000313e                __prologue_saves__
+ .text.libgcc   0x00003176       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_epilogue.o)
+                0x00003176                __epilogue_restores__
  .text.avr-libc
-                0x000031e4       0x42 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(itoa.o)
-                0x000031e4                itoa
+                0x000031ac       0x42 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(itoa.o)
+                0x000031ac                itoa
  .text.avr-libc
-                0x00003226       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(strrev.o)
-                0x00003226                strrev
- .text.libgcc   0x00003246       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_udivmodhi4.o)
-                0x00003246                __udivmodhi4
-                0x0000326e                . = ALIGN (0x2)
+                0x000031ee       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(strrev.o)
+                0x000031ee                strrev
+ .text.libgcc   0x0000320e       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_udivmodhi4.o)
+                0x0000320e                __udivmodhi4
+                0x00003236                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000326e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
-                0x0000326e                exit
-                0x0000326e                _exit
+ .fini9         0x00003236        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
+                0x00003236                exit
+                0x00003236                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -535,11 +535,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000326e        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
+ .fini0         0x00003236        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003272                _etext = .
+                0x0000323a                _etext = .
 
-.data           0x00800200      0x13c load address 0x00003272
+.data           0x00800200      0x138 load address 0x0000323a
                 0x00800200                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800200        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6/crtm2560.o
@@ -548,139 +548,139 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
  .data          0x00800200        0x0 ./MCAL/Timer/Timer0/Timer0.o
  .data          0x00800200        0x0 ./MCAL/DIO/DIO.o
  .data          0x00800200        0x0 ./MCAL/ADC/adc.o
- .data          0x00800200        0x4 ./HAL/voice_sensor/voice.o
- .data          0x00800204        0x0 ./HAL/Servo/servo.o
- .data          0x00800204        0x0 ./HAL/Motor/motors.o
- .data          0x00800204        0x0 ./HAL/LED/LED.o
- .data          0x00800204       0x18 ./HAL/Bluetooth/bluetooth.o
- .data          0x0080021c        0x0 ./Application/MainApp/robot.o
- .data          0x0080021c        0x0 ./Application/App2/App2.o
- .data          0x0080021c        0x0 ./Application/App1/test_bluetooth.o
- .data          0x0080021c        0x0 ./Application/APP3/app3.o
- .data          0x0080021c        0x0 ./main.o
- .data          0x0080021c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_mulsi3.o)
- .data          0x0080021c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
- .data          0x0080021c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clear_bss.o)
- .data          0x0080021c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_fixunssfsi.o)
- .data          0x0080021c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_addsub_sf.o)
- .data          0x0080021c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_div_sf.o)
- .data          0x0080021c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_ge_sf.o)
- .data          0x0080021c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_sf_to_si.o)
- .data          0x0080021c        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_thenan_sf.o)
-                0x0080021c                __thenan_sf
- .data          0x00800224        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_usi_to_sf.o)
- .data          0x00800224        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_prologue.o)
- .data          0x00800224        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_epilogue.o)
- .data          0x00800224        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clzsi2.o)
- .data          0x00800224        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_pack_sf.o)
- .data          0x00800224        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_unpack_sf.o)
- .data          0x00800224        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_fpcmp_parts_sf.o)
- .data          0x00800224      0x100 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clz.o)
-                0x00800224                __clz_tab
- .data          0x00800324        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(itoa.o)
- .data          0x00800324        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(strrev.o)
- .data          0x00800324        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_udivmodhi4.o)
+ .data          0x00800200        0x0 ./HAL/voice_sensor/voice.o
+ .data          0x00800200        0x0 ./HAL/Servo/servo.o
+ .data          0x00800200        0x0 ./HAL/Motor/motors.o
+ .data          0x00800200        0x0 ./HAL/LED/LED.o
+ .data          0x00800200       0x18 ./HAL/Bluetooth/bluetooth.o
+ .data          0x00800218        0x0 ./Application/MainApp/robot.o
+ .data          0x00800218        0x0 ./Application/App2/App2.o
+ .data          0x00800218        0x0 ./Application/App1/test_bluetooth.o
+ .data          0x00800218        0x0 ./Application/APP3/app3.o
+ .data          0x00800218        0x0 ./main.o
+ .data          0x00800218        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_mulsi3.o)
+ .data          0x00800218        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
+ .data          0x00800218        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clear_bss.o)
+ .data          0x00800218        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_fixunssfsi.o)
+ .data          0x00800218        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_addsub_sf.o)
+ .data          0x00800218        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_div_sf.o)
+ .data          0x00800218        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_ge_sf.o)
+ .data          0x00800218        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_sf_to_si.o)
+ .data          0x00800218        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_thenan_sf.o)
+                0x00800218                __thenan_sf
+ .data          0x00800220        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_usi_to_sf.o)
+ .data          0x00800220        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_prologue.o)
+ .data          0x00800220        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_epilogue.o)
+ .data          0x00800220        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clzsi2.o)
+ .data          0x00800220        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_pack_sf.o)
+ .data          0x00800220        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_unpack_sf.o)
+ .data          0x00800220        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_fpcmp_parts_sf.o)
+ .data          0x00800220      0x100 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clz.o)
+                0x00800220                __clz_tab
+ .data          0x00800320        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(itoa.o)
+ .data          0x00800320        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(strrev.o)
+ .data          0x00800320        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_udivmodhi4.o)
  *(.data*)
  .data.TIMER2_u16Prescaler
-                0x00800324        0x2 ./MCAL/Timer/Timer2/Timer2.o
+                0x00800320        0x2 ./MCAL/Timer/Timer2/Timer2.o
  .data.TIMER0_u16Prescaler
-                0x00800326        0x2 ./MCAL/Timer/Timer0/Timer0.o
+                0x00800322        0x2 ./MCAL/Timer/Timer0/Timer0.o
  .data.duty_cycle_S1
-                0x00800328        0x1 ./HAL/Servo/servo.o
-                0x00800328                duty_cycle_S1
+                0x00800324        0x1 ./HAL/Servo/servo.o
+                0x00800324                duty_cycle_S1
  .data.duty_cycle_S2
-                0x00800329        0x1 ./HAL/Servo/servo.o
-                0x00800329                duty_cycle_S2
- .data.pd0      0x0080032a        0x4 ./HAL/Motor/motors.o
-                0x0080032a                pd0
- .data.pd1      0x0080032e        0x4 ./HAL/Motor/motors.o
-                0x0080032e                pd1
- .data.pd2      0x00800332        0x4 ./HAL/Motor/motors.o
-                0x00800332                pd2
- .data.pd3      0x00800336        0x4 ./HAL/Motor/motors.o
-                0x00800336                pd3
+                0x00800325        0x1 ./HAL/Servo/servo.o
+                0x00800325                duty_cycle_S2
+ .data.pd0      0x00800326        0x4 ./HAL/Motor/motors.o
+                0x00800326                pd0
+ .data.pd1      0x0080032a        0x4 ./HAL/Motor/motors.o
+                0x0080032a                pd1
+ .data.pd2      0x0080032e        0x4 ./HAL/Motor/motors.o
+                0x0080032e                pd2
+ .data.pd3      0x00800332        0x4 ./HAL/Motor/motors.o
+                0x00800332                pd3
  .data.system_state
-                0x0080033a        0x1 ./Application/MainApp/robot.o
-                0x0080033a                system_state
+                0x00800336        0x1 ./Application/MainApp/robot.o
+                0x00800336                system_state
  .data.auto_state
-                0x0080033b        0x1 ./Application/MainApp/robot.o
-                0x0080033b                auto_state
+                0x00800337        0x1 ./Application/MainApp/robot.o
+                0x00800337                auto_state
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x0080033c                . = ALIGN (0x2)
-                0x0080033c                _edata = .
-                0x0080033c                PROVIDE (__data_end, .)
+                0x00800338                . = ALIGN (0x2)
+                0x00800338                _edata = .
+                0x00800338                PROVIDE (__data_end, .)
 
-.bss            0x0080033c      0x2c8
-                0x0080033c                PROVIDE (__bss_start, .)
+.bss            0x00800338      0x2c8
+                0x00800338                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6/crtm2560.o
- .bss           0x0080033c        0x0 ./MCAL/UART/uart.o
- .bss           0x0080033c        0x0 ./MCAL/Timer/Timer2/Timer2.o
- .bss           0x0080033c        0x0 ./MCAL/Timer/Timer0/Timer0.o
- .bss           0x0080033c        0x0 ./MCAL/DIO/DIO.o
- .bss           0x0080033c        0x0 ./MCAL/ADC/adc.o
- .bss           0x0080033c        0x0 ./HAL/voice_sensor/voice.o
- .bss           0x0080033c        0x0 ./HAL/Servo/servo.o
- .bss           0x0080033c        0x0 ./HAL/Motor/motors.o
- .bss           0x0080033c        0x0 ./HAL/LED/LED.o
- .bss           0x0080033c        0x0 ./HAL/Bluetooth/bluetooth.o
- .bss           0x0080033c        0x0 ./Application/MainApp/robot.o
- .bss           0x0080033c        0x0 ./Application/App2/App2.o
- .bss           0x0080033c        0x0 ./Application/App1/test_bluetooth.o
- .bss           0x0080033c        0x0 ./Application/APP3/app3.o
- .bss           0x0080033c        0x0 ./main.o
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_mulsi3.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clear_bss.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_fixunssfsi.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_addsub_sf.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_div_sf.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_ge_sf.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_sf_to_si.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_thenan_sf.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_usi_to_sf.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_prologue.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_epilogue.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clzsi2.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_pack_sf.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_unpack_sf.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clz.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(itoa.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(strrev.o)
- .bss           0x0080033c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6/crtm2560.o
+ .bss           0x00800338        0x0 ./MCAL/UART/uart.o
+ .bss           0x00800338        0x0 ./MCAL/Timer/Timer2/Timer2.o
+ .bss           0x00800338        0x0 ./MCAL/Timer/Timer0/Timer0.o
+ .bss           0x00800338        0x0 ./MCAL/DIO/DIO.o
+ .bss           0x00800338        0x0 ./MCAL/ADC/adc.o
+ .bss           0x00800338        0x0 ./HAL/voice_sensor/voice.o
+ .bss           0x00800338        0x0 ./HAL/Servo/servo.o
+ .bss           0x00800338        0x0 ./HAL/Motor/motors.o
+ .bss           0x00800338        0x0 ./HAL/LED/LED.o
+ .bss           0x00800338        0x0 ./HAL/Bluetooth/bluetooth.o
+ .bss           0x00800338        0x0 ./Application/MainApp/robot.o
+ .bss           0x00800338        0x0 ./Application/App2/App2.o
+ .bss           0x00800338        0x0 ./Application/App1/test_bluetooth.o
+ .bss           0x00800338        0x0 ./Application/APP3/app3.o
+ .bss           0x00800338        0x0 ./main.o
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_mulsi3.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_exit.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clear_bss.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_fixunssfsi.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_addsub_sf.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_div_sf.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_ge_sf.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_sf_to_si.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_thenan_sf.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_usi_to_sf.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_prologue.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_epilogue.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clzsi2.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_pack_sf.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_unpack_sf.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_clz.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(itoa.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr6\libc.a(strrev.o)
+ .bss           0x00800338        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a(_udivmodhi4.o)
  *(.bss*)
  .bss.int_callBackPtr
-                0x0080033c        0x2 ./MCAL/UART/uart.o
+                0x00800338        0x2 ./MCAL/UART/uart.o
  .bss.TIMER2_uint8_tTCCR2A_Value
-                0x0080033e        0x1 ./MCAL/Timer/Timer2/Timer2.o
+                0x0080033a        0x1 ./MCAL/Timer/Timer2/Timer2.o
  .bss.TIMER2_uint8_tTCCR2B_Value
-                0x0080033f        0x1 ./MCAL/Timer/Timer2/Timer2.o
+                0x0080033b        0x1 ./MCAL/Timer/Timer2/Timer2.o
  .bss.TIMER0_uint8_tTCCR0A_Value
-                0x00800340        0x1 ./MCAL/Timer/Timer0/Timer0.o
+                0x0080033c        0x1 ./MCAL/Timer/Timer0/Timer0.o
  .bss.TIMER0_uint8_tTCCR0B_Value
-                0x00800341        0x1 ./MCAL/Timer/Timer0/Timer0.o
+                0x0080033d        0x1 ./MCAL/Timer/Timer0/Timer0.o
  .bss.g_adcResult
-                0x00800342        0x2 ./MCAL/ADC/adc.o
-                0x00800342                g_adcResult
+                0x0080033e        0x2 ./MCAL/ADC/adc.o
+                0x0080033e                g_adcResult
  .bss.ADC_callBackPtr
-                0x00800344        0x2 ./MCAL/ADC/adc.o
+                0x00800340        0x2 ./MCAL/ADC/adc.o
  *(COMMON)
- COMMON         0x00800346      0x2be ./MCAL/UART/uart.o
-                0x00800346                read_spot
-                0x00800348                input_buffer
-                0x00800604                PROVIDE (__bss_end, .)
-                0x00003272                __data_load_start = LOADADDR (.data)
-                0x000033ae                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800342      0x2be ./MCAL/UART/uart.o
+                0x00800342                read_spot
+                0x00800344                input_buffer
+                0x00800600                PROVIDE (__bss_end, .)
+                0x0000323a                __data_load_start = LOADADDR (.data)
+                0x00003372                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800604        0x0
-                0x00800604                PROVIDE (__noinit_start, .)
+.noinit         0x00800600        0x0
+                0x00800600                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800604                PROVIDE (__noinit_end, .)
-                0x00800604                _end = .
-                0x00800604                PROVIDE (__heap_start, .)
+                0x00800600                PROVIDE (__noinit_end, .)
+                0x00800600                _end = .
+                0x00800600                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -698,7 +698,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x3e04
+.stab           0x00000000     0x3e64
  *(.stab)
  .stab          0x00000000      0x648 ./MCAL/UART/uart.o
  .stab          0x00000648      0x390 ./MCAL/Timer/Timer2/Timer2.o
@@ -709,30 +709,30 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr6\libgcc.a
                                 0x9a8 (size before relaxing)
  .stab          0x00001704      0x504 ./MCAL/ADC/adc.o
                                 0x540 (size before relaxing)
- .stab          0x00001c08      0x3b4 ./HAL/voice_sensor/voice.o
-                                0x3c0 (size before relaxing)
- .stab          0x00001fbc      0x474 ./HAL/Servo/servo.o
+ .stab          0x00001c08      0x36c ./HAL/voice_sensor/voice.o
+                                0x378 (size before relaxing)
+ .stab          0x00001f74      0x474 ./HAL/Servo/servo.o
                                 0x480 (size before relaxing)
- .stab          0x00002430      0x540 ./HAL/Motor/motors.o
+ .stab          0x000023e8      0x540 ./HAL/Motor/motors.o
                                 0x54c (size before relaxing)
- .stab          0x00002970      0x390 ./HAL/LED/LED.o
+ .stab          0x00002928      0x390 ./HAL/LED/LED.o
                                 0x3cc (size before relaxing)
- .stab          0x00002d00      0x378 ./HAL/Bluetooth/bluetooth.o
+ .stab          0x00002cb8      0x378 ./HAL/Bluetooth/bluetooth.o
                                 0x384 (size before relaxing)
- .stab          0x00003078      0x408 ./Application/MainApp/robot.o
-                                0x414 (size before relaxing)
- .stab          0x00003480      0x204 ./Application/App2/App2.o
-                                0x210 (size before relaxing)
- .stab          0x00003684      0x2b8 ./Application/App1/test_bluetooth.o
+ .stab          0x00003030      0x438 ./Application/MainApp/robot.o
+                                0x444 (size before relaxing)
+ .stab          0x00003468      0x27c ./Application/App2/App2.o
+                                0x288 (size before relaxing)
+ .stab          0x000036e4      0x2b8 ./Application/App1/test_bluetooth.o
                                 0x2c4 (size before relaxing)
- .stab          0x0000393c      0x33c ./Application/APP3/app3.o
+ .stab          0x0000399c      0x33c ./Application/APP3/app3.o
                                 0x39c (size before relaxing)
- .stab          0x00003c78      0x18c ./main.o
+ .stab          0x00003cd8      0x18c ./main.o
                                 0x408 (size before relaxing)
 
-.stabstr        0x00000000     0x28a2
+.stabstr        0x00000000     0x2919
  *(.stabstr)
- .stabstr       0x00000000     0x28a2 ./MCAL/UART/uart.o
+ .stabstr       0x00000000     0x2919 ./MCAL/UART/uart.o
 
 .stab.excl
  *(.stab.excl)

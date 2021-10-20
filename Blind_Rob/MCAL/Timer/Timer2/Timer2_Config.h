@@ -62,7 +62,7 @@ typedef enum{
 #define TIMER2_INTERRUPT_STATUS   TIMER2_INT_DISABLED
 
 
-#define Timer2_ChannalA		CHANNAL_A_EN
+#define Timer2_ChannalA		CHANNAL_A_DIS
 #define Timer2_ChannalB		CHANNAL_B_EN
 /*
  * Choose Timer2 OC2 Mode :
@@ -77,12 +77,12 @@ typedef enum{
  *   -  TIMER2_SET_OC2
  */
 //#define Timer2_OC2_MODE   Timer2_PWM_NONINVERTED_OC2
-#define Timer2_OC2A_MODE   TIMER2_PWM_NONINVERTED_OC2
+#define Timer2_OC2A_MODE   TIMER2_DISCONNECT_OC2
 #define Timer2_OC2B_MODE   TIMER2_PWM_NONINVERTED_OC2
 
 
 /*OCR2A Initial Value*/
-#define TIMER2_OCR2A_VALUE  155
+#define TIMER2_OCR2A_VALUE  255
 
 /*OCR2B Initial Value*/
 #define TIMER2_OCR2B_VALUE  0

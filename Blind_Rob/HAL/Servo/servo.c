@@ -13,8 +13,8 @@
 
 
 
-uint8_t duty_cycle_S1 = 6;
-uint8_t duty_cycle_S2 = 6;
+uint8_t duty_cycle_S1 = 6;//0->6__180->15
+uint8_t duty_cycle_S2 = 61;//0->61__180->124
 
 void Servo_Init(){
 	//three pins initialization
@@ -36,16 +36,13 @@ void Increase_angle(servo_num ser_num)
 {
 	switch(ser_num){
 	case 0:
-		duty_cycle_S1 = duty_cycle_S1 < 15? duty_cycle_S1 +1 : duty_cycle_S1;
+		duty_cycle_S1 = duty_cycle_S1 < 15? duty_cycle_S1 + 1 : duty_cycle_S1;
 		TIMER0_voidFastPWM(duty_cycle_S1);
 		break;
 	case 1:
-		duty_cycle_S2 = duty_cycle_S2 < 15? duty_cycle_S2 +1 : duty_cycle_S2;
+		duty_cycle_S2 = duty_cycle_S2 < 124? duty_cycle_S2 + 7 : duty_cycle_S2;
 		TIMER2_voidFastPWM(duty_cycle_S2);
 		break;
-//	case 2:
-//		TIMER2_voidFastPWM(duty_cycle, Channel_A2);
-//		break;
 	}
 }
 
@@ -54,15 +51,13 @@ void Decrease_angle(servo_num ser_num)
 {
 	switch(ser_num){
 	case 0:
-		duty_cycle_S1 = duty_cycle_S1 > 6? duty_cycle_S1 -1 : duty_cycle_S1;
+		duty_cycle_S1 = duty_cycle_S1 > 6? duty_cycle_S1 - 1 : duty_cycle_S1;
 		TIMER0_voidFastPWM(duty_cycle_S1);
 		break;
 	case 1:
-		duty_cycle_S2 = duty_cycle_S2 > 6? duty_cycle_S2 -1 : duty_cycle_S2;
+		duty_cycle_S2 = duty_cycle_S2 > 61? duty_cycle_S2 - 7 : duty_cycle_S2;
 		TIMER2_voidFastPWM(duty_cycle_S2);
 		break;
-//	case 2:
-//		TIMER2_voidFastPWM(duty_cycle, Channel_A2);
-//		break;
+
 	}
 }
